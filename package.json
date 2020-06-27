@@ -23,7 +23,9 @@
     "dev": "NODE_ENV=development concurrently --kill-others --success first \"babel-node node_modules/.bin/webpack --watch\" \"nodemon .\"",
     "lint": "eslint --ext .ts,.js .",
     "prepublishOnly": "NODE_ENV=production yarn build",
-    "start": "node ."
+    "start": "node .",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -71,7 +73,8 @@
     "toastify-js": "^1.6.1",
     "winston": "^3.2.1",
     "xterm": "^3.14.5",
-    "yargs": "^14.0.0"
+    "yargs": "^14.0.0",
+    "snyk": "^1.349.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -96,7 +99,7 @@
     "all-contributors-cli": "^6.9.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
-    "concurrently": "^4.1.2",
+    "concurrently": "^5.0.1",
     "css-loader": "^3.2.0",
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "14.0.0",
@@ -104,12 +107,12 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "file-loader": "^4.2.0",
-    "git-authors-cli": "^1.0.18",
+    "git-authors-cli": "^1.0.24",
     "husky": "^3.0.9",
     "lint-staged": "~9.2.5",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.19.2",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.3",
     "prettier": "^1.18.2",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -153,5 +156,6 @@
     "Soura Dutta <duttasoura@gmail.com>",
     "Tri Nguyen <tri@tridnguyen.com>",
     "harryleesan <harry.lee.san.temp@gmail.com>"
-  ]
+  ],
+  "snyk": true
 }
