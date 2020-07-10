@@ -61,7 +61,7 @@
     "file-type": "^12.3.0",
     "fs-extra": "^8.1.0",
     "helmet": "^3.20.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.16",
     "morgan": "^1.9.1",
     "node-pty": "0.9.0-beta28",
     "serve-favicon": "^2.5.0",
